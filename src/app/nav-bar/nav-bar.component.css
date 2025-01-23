@@ -1,0 +1,7 @@
+.custom-dropdown .dropdown-menu {
+    transform: translate(-200, 800px); /* Move left (-10px) and down (10px) */
+  }
+  
+  .custom-dropdown {
+    position: relative; /* Ensures positioning of child elements */
+  }

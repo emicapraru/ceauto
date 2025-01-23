@@ -1,0 +1,49 @@
+[
+    {
+        "Id": 1,
+        "SellRent":1,
+        "Name": "BMW ",
+        "Type": "530e",
+        "Price": 57000,
+        "Image": "prop-1"
+    },
+    {
+        "Id": 2,
+        "SellRent":2,
+        "Name": "Porsche",
+        "Type": "911",
+        "Price": 120002,
+        "Image": "prop-2"
+    },
+    {
+        "Id": 3,
+        "SellRent":1,
+        "Name": "BMW ",
+        "Type": "M3 Competition",
+        "Price": 12000,
+        "Image": "prop-3"
+    },
+    {
+        "Id": 4,
+        "SellRent":2,
+        "Name": "Porsche",
+        "Type": "718 Spyder",
+        "Price": 90000,
+        "Image": "prop-4"
+    },
+    {
+        "Id": 5,
+        "SellRent":1,
+        "Name": "BMW ",
+        "Type": "M8",
+        "Price": 120000,
+        "Image": "prop-5"
+    },
+    {
+        "Id": 6,
+        "SellRent":1,
+        "Name": "Porsche6",
+        "Type": "Masina",
+        "Price": 120006
+    }
+]
