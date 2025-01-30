@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1LeJT6wIGXGrIkf/LCRuqvPbg88qzRs51JXnxqCyarJh+UByAhUTy0sbhFN9NgzQNbmqTiMYmuHvkBZA9KdVnQ==",
+  "dgSpecHash": "WtbIV61+Fhu0zmkV21BpcDqE9dFMTbzrAGJZkznHDL/SgYPzAhWq1oHj14UWdJ5AYaqFKcSmccofW4HUkYcfoA==",
   "success": true,
-  "projectFilePath": "D:\\Dizertatie\\App\\HSPA\\Webapi\\WebAPI.csproj",
+  "projectFilePath": "D:\\Dizertatie\\App\\HSPA\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
@@ -14,6 +14,7 @@
     "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.32\\microsoft.entityframeworkcore.design.3.1.32.nupkg.sha512",
     "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.32\\microsoft.entityframeworkcore.relational.3.1.32.nupkg.sha512",
     "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.32\\microsoft.entityframeworkcore.sqlserver.3.1.32.nupkg.sha512",
+    "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.32\\microsoft.entityframeworkcore.tools.3.1.32.nupkg.sha512",
     "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.32\\microsoft.extensions.caching.abstractions.3.1.32.nupkg.sha512",
     "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.32\\microsoft.extensions.caching.memory.3.1.32.nupkg.sha512",
     "C:\\Users\\ecapraru\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.32\\microsoft.extensions.configuration.3.1.32.nupkg.sha512",
