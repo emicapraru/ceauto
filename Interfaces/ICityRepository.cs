@@ -13,6 +13,8 @@ namespace WebAPI.Interfaces
 
         void DeleteCity(int CityId);
 
+        Task<City> FindCity(int id);
+
 
     }
 }
