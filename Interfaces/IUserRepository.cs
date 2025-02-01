@@ -7,6 +7,12 @@ namespace WebAPI.Interfaces
     {
         Task<User> Authenticate(string UserName, string Password);
 
+        void Register(string userName, string Password);
+
+        Task<bool> UserAlreadyExists(string userName);
+
+
+
 
     }
 }

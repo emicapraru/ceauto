@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -15,10 +16,9 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
-
+    [Authorize]
     public class CityController : BaseController
     {
-
         private readonly DataContext dc;
 
         private readonly IUnitOfWork uow;
@@ -31,6 +31,8 @@ namespace WebAPI.Controllers
 
         // GET api/city
         [HttpGet]
+        //all methods are protected unless this one
+        [AllowAnonymous]
         public async Task<IActionResult> GetCities()
         {
             //throw new UnauthorizedAccessException();
