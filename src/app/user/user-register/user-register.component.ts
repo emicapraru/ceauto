@@ -97,25 +97,20 @@ export class UserRegisterComponent implements OnInit {
     this.userSubmitted = true;
     if (this.registerationForm.valid) {
       // this.user = Object.assign(this.user, this.registerationForm.value);
-      this.addUser(this.userData());
-      //this.userService.addUser(this.userData());
-      this.registerationForm.reset();
-      this.userSubmitted = false;
-      this.alertify.success('Congrats');
-    } else {
-      this.alertify.success('Failed');
+      this.authService.registerUser(this.userData()).subscribe(
+        () => {
+          this.registerationForm.reset();
+          this.userSubmitted = false;
+          this.alertify.success('Congrats, you are successfully registered');
+        },
+        (error) => {
+          console.log(error);
+          this.alertify.error(error.error);
+        }
+      );
     }
   }
 
-  addUser(user: UserForRegister) {
-    let users = [];
-    if (localStorage.getItem('Users')) {
-      users = JSON.parse(localStorage.getItem('Users') || '{}');
-      users = [user, ...users];
-    } else {
-      users = [user];
-    }
-  }
   onReset() {
     this.userSubmitted = false;
     this.registerationForm.reset();

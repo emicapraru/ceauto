@@ -40,18 +40,32 @@ export class UserLoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       console.log('Form Submitted:', this.loginForm.value);
-      const token = this.authService.authUser(this.loginForm.value);
-      if (token) {
-        localStorage.setItem('token', token.userName);
-        console.log('Login successful');
-        this.alertify.success('Login successful');
-        this.router.navigate(['/']); // Redirect to home or another route
-      } else {
-        console.log('Login unsuccessful');
-        this.alertify.error('Invalid username or password');
-      }
-    } else {
-      console.log('Form is invalid');
+      this.authService.authUser(this.loginForm.value).subscribe(
+        (response: UserForLogin) => {
+          console.log(response);
+          const user = response;
+          localStorage.setItem('token', user.token);
+          localStorage.setItem('userName', user.userName);
+          this.alertify.success('Login successful');
+          this.router.navigate(['/']); // Redirect to home or another route
+        },
+        (error) => {
+          console.log(error);
+          this.alertify.error(error.error);
+        }
+      );
+      //   if (token) {
+      //     localStorage.setItem('token', token.userName);
+      //     console.log('Login successful');
+      //     this.alertify.success('Login successful');
+      //     this.router.navigate(['/']); // Redirect to home or another route
+      //   } else {
+      //     console.log('Login unsuccessful');
+      //     this.alertify.error('Invalid username or password');
+      //   }
+      // } else {
+      //   console.log('Form is invalid');
+      // }
     }
   }
 }
