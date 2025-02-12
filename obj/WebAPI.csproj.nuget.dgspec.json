@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dizertatie\\App\\HSPA\\Webapi\\WebAPI.csproj": {}
+    "D:\\Dizertatie\\App\\HSPA\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\Dizertatie\\App\\HSPA\\Webapi\\WebAPI.csproj": {
+    "D:\\Dizertatie\\App\\HSPA\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dizertatie\\App\\HSPA\\Webapi\\WebAPI.csproj",
+        "projectUniqueName": "D:\\Dizertatie\\App\\HSPA\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "D:\\Dizertatie\\App\\HSPA\\Webapi\\WebAPI.csproj",
+        "projectPath": "D:\\Dizertatie\\App\\HSPA\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\ecapraru\\.nuget\\packages\\",
-        "outputPath": "D:\\Dizertatie\\App\\HSPA\\Webapi\\obj\\",
+        "outputPath": "D:\\Dizertatie\\App\\HSPA\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,7 +39,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -50,6 +56,10 @@
               "version": "[8.1.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.32, )"
             },
@@ -84,7 +94,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -96,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
