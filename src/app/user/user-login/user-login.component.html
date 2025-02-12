@@ -1,58 +1,81 @@
-<div class="row">
-  <div class="col-8 m-auto">
-    <div class="card m-auto">
-      <div class="card-header">
-        <h3>Login</h3>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+<div class="container">
+  <div class="screen">
+    <div class="screen__content">
+      <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="login_field">
+          <label for="username">Username:</label>
+          <i class="login__icon fas fa-user"></i>
+          <input
+            class="login_input form-control"
+            id="username"
+            placeholder="User name"
+            required
+            formControlName="username"
+          />
+          <div
+            *ngIf="
+              loginForm.get('username')?.invalid &&
+              loginForm.get('username')?.touched
+            "
+          >
+            Username is required.
+          </div>
+        </div>
+
+        <div class="login_field">
+          <label>Password:</label>
+          <i class="login__icon fas fa-lock"></i>
+          <input
+            id="password"
+            class="login_field"
+            required
+            type="password"
+            formControlName="password"
+            placeholder="Password"
+          />
+          <div
+            *ngIf="
+              loginForm.get('password')?.invalid &&
+              loginForm.get('password')?.touched
+            "
+          >
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+        <button
+          class="button login__submit"
+          type="submit"
+          [disabled]="loginForm.invalid"
+        >
+          <span class="button__text">Log In Now</span>
+          <i class="button__icon fas fa-chevron-right"></i>
+        </button>
+      </form>
+      <div class="register-label">
+        <span>Don't have an accoount? </span>
       </div>
-      <div class="card-body">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-          <div class="form-group col-12">
-            <label for="username">Username</label>
-            <input
-              class="form-control"
-              id="username"
-              required
-              formControlName="username"
-            />
-            <div
-              *ngIf="
-                loginForm.get('username')?.invalid &&
-                loginForm.get('username')?.touched
-              "
-            >
-              Username is required.
-            </div>
-          </div>
-          <div class="form-group col-12">
-            <label for="password">Password</label>
-            <input
-              id="password"
-              class="form-control"
-              required
-              type="password"
-              formControlName="password"
-            />
-            <div
-              *ngIf="
-                loginForm.get('password')?.invalid &&
-                loginForm.get('password')?.touched
-              "
-            >
-              Password must be at least 6 characters long.
-            </div>
-          </div>
-          <div class="form-group col-12">
-            <button
-              type="submit"
-              [disabled]="loginForm.invalid"
-              class="btn btn-primary"
-            >
-              Login
-            </button>
-            <button type="button" class="btn btn-secondary ml-2">Cancel</button>
-          </div>
-        </form>
+      <button class="button register__submit" (click)="goToRegister()">
+        <span class="button__text">Register</span>
+        <!-- <i class="button__icon fas fa-user-plus"></i> -->
+      </button>
+      <div class="social-login">
+        <h3>Log in via</h3>
+        <div class="social-icons">
+          <a href="#" class="social-login__icon fab fa-instagram"></a>
+          <a href="#" class="social-login__icon fab fa-facebook"></a>
+          <a href="#" class="social-login__icon fab fa-google"></a>
+        </div>
       </div>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
     </div>
   </div>
 </div>

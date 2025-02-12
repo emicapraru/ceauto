@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    <h3>Ce tip de masina cauti?</h3>
+    <h3>Ce tip de mașină cauți?</h3>
   </div>
   <div class="card-body">
     <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
@@ -8,7 +8,7 @@
         <tabset #formTabs>
           <tab heading="Datele personale ">
             <div class="form-group col-12">
-              <label for="name">Nume</label>
+              <label for="name">Nume:</label>
               <input
                 type="text"
                 class="form-control"
@@ -31,7 +31,7 @@
               </span>
             </div>
             <div class="form-group col-12">
-              <label for="name">Prenume</label>
+              <label for="name">Prenume:</label>
               <input
                 type="text"
                 class="form-control"
@@ -54,7 +54,7 @@
               </span>
             </div>
             <div class="form-group col-12">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label">Email:</label>
               <input
                 type="text"
                 class="form-control"
@@ -77,13 +77,14 @@
               </span>
             </div>
             <div class="form-group col-12">
-              <label for="name">Telefon</label>
+              <label for="name">Telefon:</label>
               <input type="text" class="form-control" ngModel name="Type" />
             </div>
+            <br />
             <div class="form-group col-12">
               <button
                 type="button"
-                class="btn btn-primary btn-block"
+                class="btn btn-primary btn-block button"
                 (click)="selectTab(1)"
               >
                 Next
@@ -92,7 +93,7 @@
           </tab>
           <tab heading="Informatii despre masina">
             <div class="form-group col-12">
-              <label>Buget (euro)</label>
+              <label>Buget (euro):</label>
               <input type="text" class="form-control" ngModel name="Price" />
             </div>
             <div class="form-group col-12">
@@ -100,8 +101,12 @@
               <input type="text" class="form-control" />
             </div>
             <div class="form-group col-12">
-              <label>Cutia de viteze</label>
-              <input type="text" class="form-control" />
+              <label>Cutia de viteze:</label>
+              <br />
+              <select class="dropdown" name="cutieViteze" id="cutieViteze">
+                <option value="volvo">Automata</option>
+                <option value="saab">Manuala</option>
+              </select>
             </div>
             <div class="form-group col-12">
               <label
@@ -114,24 +119,25 @@
               <label>De ce consideri ca ai nevoie de consultanta?</label>
               <input type="text" class="form-control" />
             </div>
+            <br />
             <button
               type="button"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block button"
               (click)="selectTab(2)"
             >
               Next
             </button>
             <button
               type="button"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block button"
               (click)="selectTab(0)"
             >
               Back
             </button>
           </tab>
-          <tab heading="Adress">
+          <tab heading="Informaţii despre întâlnire">
             <div class="form-group col-12">
-              <label for="name">City</label>
+              <label for="name">Oras</label>
               <select
                 class="form-control"
                 [(ngModel)]="propertyView.city"
@@ -144,88 +150,94 @@
               </select>
             </div>
             <div class="form-group col-12">
-              <label>Total Floor</label>
-              <input type="text" class="form-control" />
+              <label>Ai o zi anume când preferi să discutăm?</label>
+              <input type="date" class="form-control" />
+              <!-- <input type="text" class="form-control" /> -->
             </div>
             <div class="form-group col-12">
-              <label>Address</label>
+              <label>Alte informaţii utile:</label>
               <input type="text" class="form-control" />
             </div>
-            <div class="form-group col-12">
-              <label>Landmark</label>
-              <input type="text" class="form-control" />
-            </div>
+            <br />
             <button
               type="button"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block button"
               (click)="selectTab(3)"
             >
               Next
             </button>
             <button
               type="button"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block button"
               (click)="selectTab(1)"
             >
               Back
             </button>
           </tab>
-          <tab heading="Other Details">
+          <tab heading="Alte detalii">
             <div class="form-group col-12">
-              <label>Ready to Move</label><br />
-              <input type="radio" id="Yes" value="1" name="RTM" />
-              <label class="m-2">Yes</label>
-              <input type="radio" id="No" value="2" name="RTM" />
-              <label class="m-2">No</label>
+              <label>Alte detalii (opționale): </label>
+              <textarea type="text" class="form-control" rows="4"></textarea>
             </div>
-            <div class="form-group col-3">
-              <label>Possession/Avaialble From</label>
-              <input type="date" class="form-control" />
-            </div>
-            <div class="form-group col-12">
-              <label>Age of Property</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group col-12">
-              <label>Gated Community</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group col-12">
-              <label>Main Entrance</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group col-12">
-              <label>Description</label>
-              <textarea type="text" class="form-control" rows="6"></textarea>
-            </div>
+            <br />
             <button
               type="button"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block button"
               (click)="selectTab(4)"
             >
               Next
             </button>
             <button
               type="button"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block button"
               (click)="selectTab(2)"
             >
               Back
             </button>
           </tab>
-          <tab heading="Photos">
+          <tab heading="Termenii şi condiţii">
             <div class="form-group col-12">
-              <div class="photo-control">
-                <button class="mt-5" type="button">Upload</button> <br />
-                This is under construction
+              <div class="">
+                <label><h3>Procesarea datelor cu caracter personal</h3></label>
+                <br />
+                <label
+                  >Informaţiile prezente pe această pagină servesc pe post de
+                  termeni. Ai citit tot şi eşti de acord cu ele?
+                </label>
+
+                <div class="form-group col-12">
+                  <input type="radio" id="Yes" value="1" name="RTM" />
+                  <label class="m-2">Da</label>
+                  <input type="radio" id="No" value="2" name="RTM" />
+                  <label class="m-2">Nu</label>
+                </div>
+
+                <label
+                  >Datele personale de mai sus sunt colectate şi procesate
+                  strict în vederea procesului de consultanţă. Ele sunt şterse
+                  automat după 90 de zile în lipsa altei înţelegeri.</label
+                >
+                <!-- <textarea type="text" class="form-control" rows="2"></textarea> -->
+                <label
+                  >Sunt de acord cu procesarea datelor mele personale:</label
+                >
+                <div class="form-group col-12">
+                  <input type="radio" id="Yes" value="1" name="RTM" />
+                  <label class="m-2">Da</label>
+                  <input type="radio" id="No" value="2" name="RTM" />
+                  <label class="m-2">Nu</label>
+                </div>
               </div>
             </div>
             <button
               type="button"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block button"
               (click)="selectTab(3)"
             >
               Back
+            </button>
+            <button type="button" class="btn btn-primary btn-block button">
+              Trimite
             </button>
           </tab>
         </tabset>

@@ -2,3 +2,11 @@
 @import 'assets/forms.css';
 @import '../node_modules/alertifyjs/build/css/alertify.min.css';
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+/* src/styles.css or src/styles.scss */
+body {
+  background: linear-gradient(90deg, #f3faf8, #f3faf8); /* Gray gradient background */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}

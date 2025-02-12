@@ -46,6 +46,16 @@ export class AddPropertyComponent implements OnInit {
     bhk: 0,
     builtArea: 0,
     readyToMove: false,
+    // prename: '',
+    // email: '',
+    // phone: 0,
+    // buget: 0,
+    // varianteAuto: '',
+    // cutieViteza: '',
+    // regimCondus: '',
+    // consideriConsultanta: '',
+    // day: '',
+    // informatiiUtile: '',
   };
   constructor(private router: Router, private housingService: HousingService) {}
   cityList: any[];

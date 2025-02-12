@@ -11,4 +11,15 @@ export interface IPropertyBase {
   readyToMove: boolean;
   photo?: string;
   estPossessionOn?: string;
+  //
+  // prename: string;
+  // email: string;
+  // phone: number;
+  // buget: number;
+  // varianteAuto: string;
+  // cutieViteza: string;
+  // regimCondus: string;
+  // consideriConsultanta: string;
+  // day: string;
+  // informatiiUtile: string;
 }

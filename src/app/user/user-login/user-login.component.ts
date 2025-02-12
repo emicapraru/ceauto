@@ -48,11 +48,11 @@ export class UserLoginComponent implements OnInit {
           localStorage.setItem('userName', user.userName);
           this.alertify.success('Login successful');
           this.router.navigate(['/']); // Redirect to home or another route
-        },
-        (error) => {
-          console.log(error);
-          this.alertify.error(error.error);
         }
+        // (error) => {
+        //   console.log(error);
+        //   this.alertify.error(error.error);
+        // }
       );
       //   if (token) {
       //     localStorage.setItem('token', token.userName);
@@ -67,5 +67,8 @@ export class UserLoginComponent implements OnInit {
       //   console.log('Form is invalid');
       // }
     }
+  }
+  goToRegister() {
+    this.router.navigate(['/user-register']);
   }
 }

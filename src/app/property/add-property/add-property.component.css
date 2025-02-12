@@ -1,7 +1,9 @@
-.photo-control {
-    min-height: 300px;
-    vertical-align: middle;
-    text-align: center;
-    border: 1px dashed blue;
-    margin: 5px;
-  }
+.card-header,
+.button{
+  background: linear-gradient(90deg, #09795d, #09795d);
+}
+select {
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}

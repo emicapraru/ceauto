@@ -3,10 +3,11 @@ import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import routeConfig from './app/routes';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { environment } from './environments/environment';
 import { enableProdMode } from '@angular/core';
+import { HttpErrorInterceptorService } from './app/services/httperror-interceptor.service';
 
 if (environment.production) {
   enableProdMode();
@@ -15,7 +16,7 @@ if (environment.production) {
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routeConfig),
-    provideHttpClient(),
+    provideHttpClient(withInterceptors([HttpErrorInterceptorService])),
     provideAnimations(),
   ],
 }).catch((err) => console.error(err));

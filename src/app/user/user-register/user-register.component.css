@@ -1,0 +1,127 @@
+/* General Reset and Font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  background-color: #09795d; /* Solid color background */
+  color: #fff; /* Text color for contrast against the background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Container for centering the form */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Screen styling */
+.screen {
+  background-color: #09795d; /* Solid background color */
+  position: relative;
+  height: 600px;
+  width: 360px;
+  box-shadow: 0px 0px 24px #09795d;
+  border-radius: 10px; /* Rounded corners for the form container */
+}
+
+/* Form fields styling */
+.register__field {
+  padding: 20px 0px;
+  position: relative;
+}
+
+.register__input {
+  border: none;
+  border-bottom: 2px solid #D1D1D4;
+  background: none;
+  padding: 10px;
+  padding-left: 24px;
+  font-weight: 700;
+  width: 75%;
+  transition: .2s;
+}
+
+input {
+  width: 100%; /* Makes input fields full-width */
+  padding: 10px; /* Adds inner spacing */
+  margin-top: 5px; /* Space between label and input */
+  border: 2px solid #ccc; /* Light gray border */
+  border-radius: 25px; /* Rounded corners */
+  outline: none; /* Removes default focus outline */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+input:focus {
+  border-color: #5D54A4; /* Change border color on focus */
+  box-shadow: 0 0 10px rgba(93, 84, 164, 0.3); /* Soft glow effect */
+}
+
+/* Buttons Styling */
+.register__submit {
+  background: #5D54A4; /* New color for the submit button */
+  font-size: 16px;
+  margin-top: 30px;
+  padding: 16px 20px;
+  border-radius: 50px; /* More rounded buttons */
+  border: 1px solid #09795d;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.register__cancel {
+  background: #F1F1F1;
+  color: #790929;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 16px 20px;
+  border-radius: 50px;
+  border: 1px solid #790929;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.register__submit:hover {
+  background: #5D54A4; /* Button color stays the same */
+  transform: translateY(-3px); /* Hover lift effect */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.register__cancel:hover {
+  background: #790929;
+  color: white;
+  transform: translateY(-3px); /* Hover lift effect */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustment */
+@media screen and (max-width: 480px) {
+  .screen {
+    width: 90%;
+    height: auto;
+  }
+}
