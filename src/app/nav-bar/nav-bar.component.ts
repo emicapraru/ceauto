@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BootstrapModule } from '../../bootstrap.module';
 import { AlertifyService } from '../services/alertify.service';
 
@@ -26,4 +26,5 @@ export class NavBarComponent implements OnInit {
     localStorage.removeItem('userName');
     this.alertify.success('Logout succes');
   }
+  @Input() isTransparent: boolean = false;
 }

@@ -25,11 +25,13 @@ body {
 }
 
 /* Screen styling */
-.screen {
+.screen-register {
   background-color: #09795d; /* Solid background color */
   position: relative;
-  height: 600px;
-  width: 360px;
+  margin-left: 60%;
+  margin-bottom: auto;
+  height: 60%;
+  width: 50%;
   box-shadow: 0px 0px 24px #09795d;
   border-radius: 10px; /* Rounded corners for the form container */
 }
@@ -62,13 +64,13 @@ input {
 }
 
 input:focus {
-  border-color: #5D54A4; /* Change border color on focus */
-  box-shadow: 0 0 10px rgba(93, 84, 164, 0.3); /* Soft glow effect */
+  border-color: #4da674; /* Change border color on focus */
+
 }
 
 /* Buttons Styling */
 .register__submit {
-  background: #5D54A4; /* New color for the submit button */
+  background: #4da674; /* New color for the submit button */
   font-size: 16px;
   margin-top: 30px;
   padding: 16px 20px;
@@ -79,7 +81,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   color: white;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -88,31 +90,31 @@ input:focus {
 
 .register__cancel {
   background: #F1F1F1;
-  color: #790929;
+  color: #4da674;
   font-size: 16px;
   margin-top: 10px;
   padding: 16px 20px;
   border-radius: 50px;
-  border: 1px solid #790929;
+  border: 1px solid #4da674;
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .register__submit:hover {
-  background: #5D54A4; /* Button color stays the same */
+  background: #4da674; /* Button color stays the same */
   transform: translateY(-3px); /* Hover lift effect */
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .register__cancel:hover {
-  background: #790929;
+  background: #4da674;
   color: white;
   transform: translateY(-3px); /* Hover lift effect */
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);

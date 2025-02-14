@@ -1,0 +1,168 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.filter-container {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Inputs & Select Dropdowns */
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Adjust input sizes */
+input::placeholder {
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* Button Styling */
+button {
+  background: #4da674;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #4da674;
+}
+
+/* Icon Styling */
+button i {
+  font-size: 16px;
+}
+
+/* Search & Clear Buttons */
+button[type="button"] {
+  margin-left: 10px;
+}
+
+/* Grid Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.col-md-2 {
+  flex: 1 1 calc(16.66% - 15px);
+  min-width: 160px;
+}
+
+.col-md-6 {
+  flex: 1 1 calc(50% - 15px);
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Sorting Controls */
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-controls select, .sort-controls button {
+  width: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-2,.col-md-1, .col-md-6 {
+    flex: 1 1 100%;
+  }
+}
+.cars{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures even distribution */
+  gap: 15px; /* Space between items */
+}
+.col-sm-4 {
+  flex: 1 1 calc(33.33% - 15px); /* 3 items per row by default */
+  max-width: calc(33.33% - 15px);
+}
+.button{
+  background: linear-gradient(90deg, #09795d, #09795d);
+}
+.sort-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Pushes content to the right */
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sort-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sort-controls select {
+  width: auto;
+  padding: 8px;
+}
+
+.sort-controls button {
+  background: #09795d;
+  padding: 8px 12px;
+}
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-dropdown select {
+  appearance: none; /* Removes default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px; /* Space for custom arrow */
+  cursor: pointer;
+}
+
+.custom-dropdown::after {
+  content: '\25BC'; /* Unicode down arrow */
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevents clicking on the arrow */
+  color: #333;
+}

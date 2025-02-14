@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
@@ -7,6 +7,8 @@ import { HousingService } from '../../services/housing.service';
 import { IPropertyBase } from '../../model/ipropertybase';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TabsetComponent, TabsModule } from 'ngx-bootstrap/tabs';
+import { NavBarComponent } from '../../nav-bar/nav-bar.component';
+import { DownBarComponent } from '../../down-bar/down-bar.component';
 
 @Component({
   selector: 'app-add-property',
@@ -20,12 +22,15 @@ import { TabsetComponent, TabsModule } from 'ngx-bootstrap/tabs';
     FormsModule,
     TabsModule,
     ButtonsModule,
+    NavBarComponent,
+    DownBarComponent,
   ],
 })
 export class AddPropertyComponent implements OnInit {
   [x: string]: any;
   @ViewChild('Form') addPropertyForm: NgForm;
   @ViewChild('formTabs') formTabs: TabsetComponent;
+  @ViewChild('formContainer') formContainer: ElementRef;
 
   propertyView: IPropertyBase = {
     // id: null,
@@ -84,5 +89,8 @@ export class AddPropertyComponent implements OnInit {
 
   selectTab(tabId: number) {
     this.formTabs.tabs[tabId].active = true;
+  }
+  scrollToForm() {
+    this.formContainer.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 }

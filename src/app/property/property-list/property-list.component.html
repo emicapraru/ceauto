@@ -1,5 +1,150 @@
-<div class="row">
-  <div *ngFor="let property of properties" class="shadow-lg col-sm-4 p-3">
-    <app-property-card [property]="property"></app-property-card>
+<div class="filter-container">
+  <div class="row">
+    <!-- First Row -->
+    <div class="col-md-2">
+      <label>Marca</label>
+      <select [(ngModel)]="filter.marca">
+        <option *ngFor="let marca of marcas" [value]="marca">
+          {{ marca }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <label>Model</label>
+      <select [(ngModel)]="filter.model">
+        <option *ngFor="let model of models" [value]="model">
+          {{ model }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <label>Generație</label>
+      <input
+        type="text"
+        [(ngModel)]="filter.generatie"
+        placeholder="Generație"
+      />
+    </div>
+
+    <div class="col-md-2">
+      <label>Tip Caroserie</label>
+      <select [(ngModel)]="filter.tipCaroserie">
+        <option *ngFor="let tip of tipuriCaroserie" [value]="tip">
+          {{ tip }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <label>Pret de la</label>
+      <input type="number" [(ngModel)]="filter.pretDeLa" placeholder="€" />
+    </div>
+
+    <div class="col-md-2">
+      <label>Pret până la</label>
+      <input type="number" [(ngModel)]="filter.pretPanaLa" placeholder="€" />
+    </div>
+  </div>
+
+  <!-- Second Row -->
+  <div class="row">
+    <div class="col-md-2">
+      <label>Anul de la</label>
+      <input type="number" [(ngModel)]="filter.anDeLa" placeholder="YYYY" />
+    </div>
+
+    <div class="col-md-2">
+      <label>Anul până la</label>
+      <input type="number" [(ngModel)]="filter.anPanaLa" placeholder="YYYY" />
+    </div>
+
+    <div class="col-md-2">
+      <label>Combustibil</label>
+      <select [(ngModel)]="filter.combustibil">
+        <option *ngFor="let combustibil of combustibili" [value]="combustibil">
+          {{ combustibil }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <label>Km de la</label>
+      <input type="number" [(ngModel)]="filter.kmDeLa" placeholder="KM" />
+    </div>
+
+    <div class="col-md-2">
+      <label>Km până la</label>
+      <input type="number" [(ngModel)]="filter.kmPanaLa" placeholder="KM" />
+    </div>
+  </div>
+
+  <!-- Third Row -->
+  <div class="row">
+    <div class="col-md-2">
+      <label>Stare tehnică</label>
+      <select [(ngModel)]="filter.stareTehnica">
+        <option *ngFor="let stare of stariTehnice" [value]="stare">
+          {{ stare }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-8">
+      <br />
+      <input
+        type="text"
+        [(ngModel)]="filter.searchTerm"
+        placeholder="Caută modelul, versiunea sau altele"
+      />
+      <br />
+      <br />
+      <button class="button" (click)="onCarFiler()">Caută mașina 🔍</button>
+      <button type="button" class="button" (click)="onCityFilterClear()">
+        Resetare filtre
+      </button>
+      &nbsp;
+    </div>
+    <!--
+    <div class="col-md-2">
+      <label>
+        <input type="checkbox" [(ngModel)]="filter.eligibilFinantare" />
+        Eligibil pentru finanțare
+      </label>
+    </div> -->
   </div>
 </div>
+<!-- sorting -->
+<div class="row justify-content-end sort-controls">
+  <div class="col-auto">
+    <label class="sort-label">Sort by:</label>
+  </div>
+  <div class="col-auto custom-dropdown">
+    <select [(ngModel)]="SortbyParam" class="form-control">
+      <option value="Name">Name</option>
+      <option value="Price">Price</option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <button type="button" class="button" (click)="onSortDirection()">
+      <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-alpha-down"></i>
+      <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-alpha-up"></i>
+    </button>
+  </div>
+</div>
+<div class="cars">
+  <div
+    *ngFor="
+      let property of properties
+        | filter : SearchCar : 'car'
+        | sort : [SortbyParam, SortDirection]
+    "
+    class="col-sm-4"
+  >
+    <div class="shadow-lg p-3 mb-4">
+      <app-property-card [property]="property"></app-property-card>
+    </div>
+  </div>
+</div>
+<app-down-bar></app-down-bar>

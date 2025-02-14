@@ -1,0 +1,34 @@
+/* scroll-to-top.component.css */
+.down-bar-container {
+  position: fixed;
+  bottom: 3%;
+  right: 3%; /* Position the button on the right side */
+  text-align: center;
+}
+
+.down-bar-btn {
+  background: #09795d; /* Original button color */
+  color: white;
+  border: none;
+  width: 50px; /* Set the width for a consistent size */
+  height: 50px; /* Set the height equal to the width to make it circular */
+  border-radius: 50%; /* Round shape */
+  font-size: 24px; /* Larger arrow size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.down-bar-btn:hover {
+  background-color: #066c4d; /* Darker shade when hovered */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.down-bar-btn::before {
+  content: "↑"; /* Unicode arrow character */
+  font-size: 24px;
+  font-weight: bold;
+}

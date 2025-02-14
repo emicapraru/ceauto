@@ -1,10 +1,14 @@
+/* General Navbar Styles */
 .navbar {
   background: linear-gradient(90deg, rgba(7, 89, 68, 0.85), rgba(7, 89, 68, 0.85));
   backdrop-filter: blur(8px); /* Frosted glass effect */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Depth effect */
-  padding:  8px 15px;
+  padding: 8px 15px;
   transition: all 0.3s ease-in-out;
-  min-height: 55px; /* Set a smaller minimum height */
+  min-height: 55px;
+  display: flex;
+  justify-content: space-between; /* Space between logo, nav items, and toggler */
+  align-items: center; /* Center the items vertically */
 }
 
 .navbar-brand {
@@ -15,15 +19,28 @@
   letter-spacing: 1px;
 }
 
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Centers nav items */
+  flex-grow: 1; /* Ensure navbar items stretch to use the available space */
+  margin-left: auto; /* Centers the items */
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.nav-item {
+  margin: 0 15px; /* Adds space between each nav item */
+}
+
 .navbar-nav .nav-link {
-  font-size: 1 rem;
+  font-size: 1rem;
   color: #f8f9fa !important;
   transition: color 0.3s ease-in-out;
   padding: 8px 12px;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #17b076 !important; /* Slightly darker green hover effect */
+  color: #4da674 !important; /* Slightly darker green hover effect */
   text-shadow: 0px 0px 5px rgba(23, 176, 118, 0.7);
 }
 
@@ -38,7 +55,7 @@
   filter: invert(1);
 }
 
-/* Dropdown styling */
+/* Dropdown Styling */
 .custom-dropdown .dropdown-menu {
   background: rgba(7, 89, 68, 0.95);
   border: none;
@@ -54,25 +71,23 @@
 }
 
 .custom-dropdown .dropdown-item:hover {
-  background: #17b076;
+  background: #4da674;
   color: #044d37;
 }
 
-/* Responsive improvements */
+/* Responsive Improvements */
 @media (max-width: 991px) {
   .navbar {
-      background: rgba(7, 89, 68, 0.95); /* More opaque for better mobile visibility */
-  }
-
-  .navbar-nav {
-      text-align: center;
+    background: rgba(7, 89, 68, 0.95); /* More opaque for better mobile visibility */
   }
 
   .navbar-nav .nav-link {
-      display: block;
-      padding: 12px;
+    display: block;
+    padding: 12px;
   }
 }
+
+/* Logo Styling */
 .navbar-logo {
   height: 40px; /* Adjust the height */
   width: auto;
@@ -80,4 +95,10 @@
   border-radius: 10px; /* Softens the square shape */
   padding: 5px; /* Adds some spacing */
   background-color: rgba(255, 255, 255, 0.1); /* Light transparent background for smooth blending */
+}
+
+/* Transparent Navbar */
+.navbar-transparent {
+  background-color: transparent !important;
+  box-shadow: none;
 }
