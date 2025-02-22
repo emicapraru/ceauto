@@ -7,7 +7,9 @@
 	font-family: Raleway, sans-serif;
 
 }
-
+.navbar{
+  display: none;
+}
 body {
 	background: linear-gradient(90deg, #C7C5F4, #09795d);
 }

@@ -1,0 +1,46 @@
+.card {
+  min-height: 300px;
+}
+
+.card img {
+  padding: 10px;
+  height: 150px;
+}
+
+.card-img-wrapper {
+  height: 150px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.thumbnails img.active {
+  border: 2px solid #007bff;
+}
+
+.thumbnails img:hover {
+  opacity: 0.7;
+}
+
+.main-image img {
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+}

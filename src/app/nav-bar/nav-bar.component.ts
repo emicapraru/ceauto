@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { BootstrapModule } from '../../bootstrap.module';
 import { AlertifyService } from '../services/alertify.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,7 +13,7 @@ import { AlertifyService } from '../services/alertify.service';
 })
 export class NavBarComponent implements OnInit {
   loggedInUser: string;
-  constructor(private alertify: AlertifyService) {}
+  constructor(private alertify: AlertifyService, public router: Router) {}
 
   ngOnInit() {}
 

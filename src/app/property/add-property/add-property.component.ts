@@ -9,6 +9,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TabsetComponent, TabsModule } from 'ngx-bootstrap/tabs';
 import { NavBarComponent } from '../../nav-bar/nav-bar.component';
 import { DownBarComponent } from '../../down-bar/down-bar.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-add-property',
@@ -22,8 +23,8 @@ import { DownBarComponent } from '../../down-bar/down-bar.component';
     FormsModule,
     TabsModule,
     ButtonsModule,
-    NavBarComponent,
     DownBarComponent,
+    NgbCarouselModule,
   ],
 })
 export class AddPropertyComponent implements OnInit {
@@ -31,36 +32,24 @@ export class AddPropertyComponent implements OnInit {
   @ViewChild('Form') addPropertyForm: NgForm;
   @ViewChild('formTabs') formTabs: TabsetComponent;
   @ViewChild('formContainer') formContainer: ElementRef;
+  stepsVisible = false;
 
   propertyView: IPropertyBase = {
-    // id: null,
-    // name: '',
-    // price: null,
-    //  sellRent: null,
-    // propertyType: null,
-    //  furnishingType: null,
-    // bhk: null,
-    //  builtArea: null,
     city: '',
     id: 0,
     sellRent: 0,
     name: '',
-    propertyType: '',
-    furnishingType: '',
-    price: 0,
-    bhk: 0,
-    builtArea: 0,
-    readyToMove: false,
-    // prename: '',
-    // email: '',
-    // phone: 0,
-    // buget: 0,
-    // varianteAuto: '',
-    // cutieViteza: '',
-    // regimCondus: '',
-    // consideriConsultanta: '',
-    // day: '',
-    // informatiiUtile: '',
+    prename: '',
+    email: '',
+    phone: 0,
+    buget: 0,
+    variante: '',
+    cutieViteza: '',
+    regimCondus: '',
+    nevConsultanta: '',
+    zi: '',
+    alteInformatii: '',
+    alteDetalii: '',
   };
   constructor(private router: Router, private housingService: HousingService) {}
   cityList: any[];
@@ -92,5 +81,8 @@ export class AddPropertyComponent implements OnInit {
   }
   scrollToForm() {
     this.formContainer.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+  toggleSteps() {
+    this.stepsVisible = !this.stepsVisible;
   }
 }

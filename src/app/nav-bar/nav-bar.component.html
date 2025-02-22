@@ -1,6 +1,7 @@
 <nav
   class="navbar navbar-expand-lg fixed-top"
   [class.navbar-transparent]="isTransparent"
+  *ngIf="router.url !== '/user-login'"
 >
   <div class="container-fluid">
     <a class="navbar-brand" href="/">

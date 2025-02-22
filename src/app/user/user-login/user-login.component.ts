@@ -12,13 +12,14 @@ import { AlertifyService } from '../../services/alertify.service';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NavBarComponent } from '../../nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
   styleUrls: ['./user-login.component.css'],
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, NavBarComponent],
 })
 export class UserLoginComponent implements OnInit {
   loginForm: FormGroup;

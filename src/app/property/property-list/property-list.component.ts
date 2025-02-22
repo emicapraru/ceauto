@@ -51,7 +51,6 @@ export class PropertyListComponent implements OnInit {
   tipuriCaroserie = ['Sedan', 'SUV', 'Hatchback'];
   combustibili = ['Benzină', 'Motorină', 'Hibrid', 'Electric'];
   stariTehnice = ['Nou', 'Rulat', 'Avariat'];
-  //properties:IProperty[];
 
   constructor(
     private route: ActivatedRoute,

@@ -1,343 +1,360 @@
-<app-nav-bar [isTransparent]="true"></app-nav-bar>
-<!-- <div
-  class="page-header-bg-image"
-  style="background-image: url('assets/images/main-page.png')"
-></div> -->
-<div class="steps-container">
-  <h2>Iată cum arată colaborarea cu noi!</h2>
-  <p>Procesul de achiziție în 7 pași simpli:</p>
+<div class="container">
+  <img class="page-header-bg-image" src="assets/images/background.png" />
 
-  <div class="step">
-    <div class="step-number">1</div>
-    <div class="step-content">
-      <h3>Facem cunoștință</h3>
-      <p>
-        Primul pas? Ne completezi formularul! Tu ne spui de ce ai nevoie, iar
-        noi ascultăm și răspundem.
-      </p>
-      <!-- Add button to scroll to the form -->
-      <button class="btn btn-primary button" (click)="scrollToForm()">
-        Completează Formularul
+  <div class="steps-container">
+    <h2>Iată cum arată colaborarea cu noi!</h2>
+    <p>
+      Procesul de achiziție în 7 pași simpli:
+      <br />
+      <button class="btn btn-secondary" (click)="toggleSteps()">
+        Vezi pasii
       </button>
+    </p>
+    <div *ngIf="stepsVisible">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Facem cunoștință</h3>
+          <p>
+            Primul pas? Ne completezi formularul! Tu ne spui de ce ai nevoie,
+            iar noi ascultăm și răspundem.
+          </p>
+          <!-- Add button to scroll to the form -->
+          <button class="btn btn-primary button" (click)="scrollToForm()">
+            Completează Formularul
+          </button>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Faci alegerea</h3>
+          <p>
+            Îți prezentăm variantele care se încadrează în ceea ce contează
+            pentru tine, cu acel 'ceva' pe care-l ai în gând.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Verificăm riguros mașina</h3>
+          <p>
+            Verificăm tehnic și estetic mașina la fața locului, oriunde în
+            Europa, și îți comunicăm transparent ce aflăm.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Asigurăm transportul</h3>
+          <p>
+            Asigurăm transportul mașinii până la unul din sediile noastre:
+            Timisoara sau Caransebes. Va fi pe mâini bune!
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>Vorbim despre finanțare</h3>
+          <p>
+            Îți punem la dispoziție și îți recomandăm opțiuni de finanțare care
+            să fie un match perfect cu prioritățile tale.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">6</div>
+        <div class="step-content">
+          <h3>Documente și garanție</h3>
+          <p>
+            Ne ocupăm de înmatricularea mașinii și te ajutăm cu actele. Simplu,
+            fără drumuri în plus.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">7</div>
+        <div class="step-content">
+          <h3>Te bucuri de mașină</h3>
+          <p>
+            Îți pasăm cheia mașinii mult dorite! Ca să te bucuri pe deplin de
+            experiența condusului pe care ți-o inspiră.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="step">
-    <div class="step-number">2</div>
-    <div class="step-content">
-      <h3>Faci alegerea</h3>
-      <p>
-        Îți prezentăm variantele care se încadrează în ceea ce contează pentru
-        tine, cu acel 'ceva' pe care-l ai în gând.
-      </p>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-number">3</div>
-    <div class="step-content">
-      <h3>Verificăm riguros mașina</h3>
-      <p>
-        Verificăm tehnic și estetic mașina la fața locului, oriunde în Europa,
-        și îți comunicăm transparent ce aflăm.
-      </p>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-number">4</div>
-    <div class="step-content">
-      <h3>Asigurăm transportul</h3>
-      <p>
-        Asigurăm transportul mașinii până la unul din sediile noastre: Timisoara
-        sau Caransebes. Va fi pe mâini bune!
-      </p>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-number">5</div>
-    <div class="step-content">
-      <h3>Vorbim despre finanțare</h3>
-      <p>
-        Îți punem la dispoziție și îți recomandăm opțiuni de finanțare care să
-        fie un match perfect cu prioritățile tale.
-      </p>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-number">6</div>
-    <div class="step-content">
-      <h3>Documente și garanție</h3>
-      <p>
-        Ne ocupăm de înmatricularea mașinii și te ajutăm cu actele. Simplu, fără
-        drumuri în plus.
-      </p>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-number">7</div>
-    <div class="step-content">
-      <h3>Te bucuri de mașină</h3>
-      <p>
-        Îți pasăm cheia mașinii mult dorite! Ca să te bucuri pe deplin de
-        experiența condusului pe care ți-o inspiră.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="card-container" #formContainer>
-  <div class="card">
-    <div class="card-header">
-      <h3>Ce tip de mașină cauți?</h3>
-    </div>
-    <div class="card-body">
-      <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
-        <div>
-          <tabset #formTabs>
-            <tab heading="Datele personale ">
-              <div class="form-group col-12">
-                <label for="name">Nume:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  #propName="ngModel"
-                  ngModel
-                  name="Name"
-                  required
-                  minlength="5"
-                />
-                <span
-                  *ngIf="propName.valid && propName.touched"
-                  class="error-block"
+  <div class="card-container" #formContainer>
+    <div class="card">
+      <div class="card-header">
+        <h3>Ce tip de mașină cauți?</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
+          <div>
+            <tabset #formTabs>
+              <tab heading="Datele personale ">
+                <div class="form-group col-12">
+                  <label for="name">Nume:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    #propName="ngModel"
+                    ngModel
+                    name="Name"
+                    required
+                    minlength="5"
+                  />
+                  <span
+                    *ngIf="propName.valid && propName.touched"
+                    class="error-block"
+                  >
+                    <span *ngIf="propName.errors?.['required']">
+                      Please provide name!</span
+                    >
+                    <span *ngIf="propName.errors?.['required']"
+                      >Name must be at least 5 length caracters</span
+                    >
+                  </span>
+                </div>
+                <div class="form-group col-12">
+                  <label for="name">Prenume:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    #propName="ngModel"
+                    ngModel
+                    name="Name"
+                    required
+                    minlength="5"
+                  />
+                  <span
+                    *ngIf="propName.valid && propName.touched"
+                    class="error-block"
+                  >
+                    <span *ngIf="propName.errors?.['required']">
+                      Please provide name!</span
+                    >
+                    <span *ngIf="propName.errors?.['required']"
+                      >Name must be at least 5 length caracters</span
+                    >
+                  </span>
+                </div>
+                <div class="form-group col-12">
+                  <label for="email" class="form-label">Email:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    #propName="ngModel"
+                    ngModel
+                    name="Name"
+                    required
+                    minlength="5"
+                  />
+                  <span
+                    *ngIf="propName.valid && propName.touched"
+                    class="error-block"
+                  >
+                    <span *ngIf="propName.errors?.['required']">
+                      Please provide email!</span
+                    >
+                    <span *ngIf="propName.errors?.['required']"
+                      >Email must be at least 5 length caracters</span
+                    >
+                  </span>
+                </div>
+                <div class="form-group col-12">
+                  <label for="name">Telefon:</label>
+                  <input type="text" class="form-control" ngModel name="Type" />
+                </div>
+                <br />
+                <div class="form-group col-12">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-block button"
+                    (click)="selectTab(1)"
+                  >
+                    Next
+                  </button>
+                </div>
+              </tab>
+              <tab heading="Informatii despre masina">
+                <div class="form-group col-12">
+                  <label>Buget (euro):</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    ngModel
+                    name="Price"
+                  />
+                </div>
+                <div class="form-group col-12">
+                  <label>Am in minte cateva variante auto:</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group col-12">
+                  <label>Cutia de viteze:</label>
+                  <br />
+                  <select class="dropdown" name="cutieViteze" id="cutieViteze">
+                    <option value="volvo">Automata</option>
+                    <option value="saab">Manuala</option>
+                  </select>
+                </div>
+                <div class="form-group col-12">
+                  <label
+                    >Informatii despre regiul de condus- Cum folosesti
+                    masina?</label
+                  >
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group col-12">
+                  <label>De ce consideri ca ai nevoie de consultanta?</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-primary btn-block button"
+                  (click)="selectTab(2)"
                 >
-                  <span *ngIf="propName.errors?.['required']">
-                    Please provide name!</span
-                  >
-                  <span *ngIf="propName.errors?.['required']"
-                    >Name must be at least 5 length caracters</span
-                  >
-                </span>
-              </div>
-              <div class="form-group col-12">
-                <label for="name">Prenume:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  #propName="ngModel"
-                  ngModel
-                  name="Name"
-                  required
-                  minlength="5"
-                />
-                <span
-                  *ngIf="propName.valid && propName.touched"
-                  class="error-block"
+                  Next
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-block button"
+                  (click)="selectTab(0)"
                 >
-                  <span *ngIf="propName.errors?.['required']">
-                    Please provide name!</span
+                  Back
+                </button>
+              </tab>
+              <tab heading="Informaţii despre întâlnire">
+                <div class="form-group col-12">
+                  <label for="name">Oras</label>
+                  <select
+                    class="form-control"
+                    [(ngModel)]="propertyView.city"
+                    name="city"
                   >
-                  <span *ngIf="propName.errors?.['required']"
-                    >Name must be at least 5 length caracters</span
-                  >
-                </span>
-              </div>
-              <div class="form-group col-12">
-                <label for="email" class="form-label">Email:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  #propName="ngModel"
-                  ngModel
-                  name="Name"
-                  required
-                  minlength="5"
-                />
-                <span
-                  *ngIf="propName.valid && propName.touched"
-                  class="error-block"
+                    <option selected value="">--Select City--</option>
+                    <option *ngFor="let city of cityList" value="{{ city.id }}">
+                      {{ city.name }}
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group col-12">
+                  <label>Ai o zi anume când preferi să discutăm?</label>
+                  <input type="date" class="form-control" />
+                  <!-- <input type="text" class="form-control" /> -->
+                </div>
+                <div class="form-group col-12">
+                  <label>Alte informaţii utile:</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-primary btn-block button"
+                  (click)="selectTab(3)"
                 >
-                  <span *ngIf="propName.errors?.['required']">
-                    Please provide email!</span
-                  >
-                  <span *ngIf="propName.errors?.['required']"
-                    >Email must be at least 5 length caracters</span
-                  >
-                </span>
-              </div>
-              <div class="form-group col-12">
-                <label for="name">Telefon:</label>
-                <input type="text" class="form-control" ngModel name="Type" />
-              </div>
-              <br />
-              <div class="form-group col-12">
+                  Next
+                </button>
                 <button
                   type="button"
                   class="btn btn-primary btn-block button"
                   (click)="selectTab(1)"
                 >
+                  Back
+                </button>
+              </tab>
+              <tab heading="Alte detalii">
+                <div class="form-group col-12">
+                  <label>Alte detalii (opționale): </label>
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-primary btn-block button"
+                  (click)="selectTab(4)"
+                >
                   Next
                 </button>
-              </div>
-            </tab>
-            <tab heading="Informatii despre masina">
-              <div class="form-group col-12">
-                <label>Buget (euro):</label>
-                <input type="text" class="form-control" ngModel name="Price" />
-              </div>
-              <div class="form-group col-12">
-                <label>Am in minte cateva variante auto:</label>
-                <input type="text" class="form-control" />
-              </div>
-              <div class="form-group col-12">
-                <label>Cutia de viteze:</label>
-                <br />
-                <select class="dropdown" name="cutieViteze" id="cutieViteze">
-                  <option value="volvo">Automata</option>
-                  <option value="saab">Manuala</option>
-                </select>
-              </div>
-              <div class="form-group col-12">
-                <label
-                  >Informatii despre regiul de condus- Cum folosesti
-                  masina?</label
+                <button
+                  type="button"
+                  class="btn btn-primary btn-block button"
+                  (click)="selectTab(2)"
                 >
-                <input type="text" class="form-control" />
-              </div>
-              <div class="form-group col-12">
-                <label>De ce consideri ca ai nevoie de consultanta?</label>
-                <input type="text" class="form-control" />
-              </div>
-              <br />
-              <button
-                type="button"
-                class="btn btn-primary btn-block button"
-                (click)="selectTab(2)"
-              >
-                Next
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary btn-block button"
-                (click)="selectTab(0)"
-              >
-                Back
-              </button>
-            </tab>
-            <tab heading="Informaţii despre întâlnire">
-              <div class="form-group col-12">
-                <label for="name">Oras</label>
-                <select
-                  class="form-control"
-                  [(ngModel)]="propertyView.city"
-                  name="city"
-                >
-                  <option selected value="">--Select City--</option>
-                  <option *ngFor="let city of cityList" value="{{ city.id }}">
-                    {{ city.name }}
-                  </option>
-                </select>
-              </div>
-              <div class="form-group col-12">
-                <label>Ai o zi anume când preferi să discutăm?</label>
-                <input type="date" class="form-control" />
-                <!-- <input type="text" class="form-control" /> -->
-              </div>
-              <div class="form-group col-12">
-                <label>Alte informaţii utile:</label>
-                <input type="text" class="form-control" />
-              </div>
-              <br />
-              <button
-                type="button"
-                class="btn btn-primary btn-block button"
-                (click)="selectTab(3)"
-              >
-                Next
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary btn-block button"
-                (click)="selectTab(1)"
-              >
-                Back
-              </button>
-            </tab>
-            <tab heading="Alte detalii">
-              <div class="form-group col-12">
-                <label>Alte detalii (opționale): </label>
-                <textarea type="text" class="form-control" rows="4"></textarea>
-              </div>
-              <br />
-              <button
-                type="button"
-                class="btn btn-primary btn-block button"
-                (click)="selectTab(4)"
-              >
-                Next
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary btn-block button"
-                (click)="selectTab(2)"
-              >
-                Back
-              </button>
-            </tab>
-            <tab heading="Termenii şi condiţii">
-              <div class="form-group col-12">
-                <div class="">
-                  <label
-                    ><h3>Procesarea datelor cu caracter personal</h3></label
-                  >
-                  <br />
-                  <label
-                    >Informaţiile prezente pe această pagină servesc pe post de
-                    termeni. Ai citit tot şi eşti de acord cu ele?
-                  </label>
+                  Back
+                </button>
+              </tab>
+              <tab heading="Termenii şi condiţii">
+                <div class="form-group col-12">
+                  <div class="">
+                    <label
+                      ><h3>Procesarea datelor cu caracter personal</h3></label
+                    >
+                    <br />
+                    <label
+                      >Informaţiile prezente pe această pagină servesc pe post
+                      de termeni. Ai citit tot şi eşti de acord cu ele?
+                    </label>
 
-                  <div class="form-group col-12">
-                    <input type="radio" id="Yes" value="1" name="RTM" />
-                    <label class="m-2">Da</label>
-                    <input type="radio" id="No" value="2" name="RTM" />
-                    <label class="m-2">Nu</label>
-                  </div>
+                    <div class="form-group col-12">
+                      <input type="radio" id="Yes" value="1" name="RTM" />
+                      <label class="m-2">Da</label>
+                      <input type="radio" id="No" value="2" name="RTM" />
+                      <label class="m-2">Nu</label>
+                    </div>
 
-                  <label
-                    >Datele personale de mai sus sunt colectate şi procesate
-                    strict în vederea procesului de consultanţă. Ele sunt şterse
-                    automat după 90 de zile în lipsa altei înţelegeri.</label
-                  >
-                  <!-- <textarea type="text" class="form-control" rows="2"></textarea> -->
-                  <label
-                    >Sunt de acord cu procesarea datelor mele personale:</label
-                  >
-                  <div class="form-group col-12">
-                    <input type="radio" id="Yes" value="1" name="RTM" />
-                    <label class="m-2">Da</label>
-                    <input type="radio" id="No" value="2" name="RTM" />
-                    <label class="m-2">Nu</label>
+                    <label
+                      >Datele personale de mai sus sunt colectate şi procesate
+                      strict în vederea procesului de consultanţă. Ele sunt
+                      şterse automat după 90 de zile în lipsa altei
+                      înţelegeri.</label
+                    >
+                    <!-- <textarea type="text" class="form-control" rows="2"></textarea> -->
+                    <label
+                      >Sunt de acord cu procesarea datelor mele
+                      personale:</label
+                    >
+                    <div class="form-group col-12">
+                      <input type="radio" id="Yes" value="1" name="RTM" />
+                      <label class="m-2">Da</label>
+                      <input type="radio" id="No" value="2" name="RTM" />
+                      <label class="m-2">Nu</label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <button
-                type="button"
-                class="btn btn-primary btn-block button"
-                (click)="selectTab(3)"
-              >
-                Back
-              </button>
-              <button type="button" class="btn btn-primary btn-block button">
-                Trimite
-              </button>
-            </tab>
-          </tabset>
-        </div>
-      </form>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-block button"
+                  (click)="selectTab(3)"
+                >
+                  Back
+                </button>
+                <button type="button" class="btn btn-primary btn-block button">
+                  Trimite
+                </button>
+              </tab>
+            </tabset>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
+  <app-down-bar></app-down-bar>
 </div>
-<app-down-bar></app-down-bar>

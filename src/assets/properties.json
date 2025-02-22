@@ -1,49 +1,130 @@
 [
-    {
-        "Id": 1,
-        "SellRent":1,
-        "Name": "BMW ",
-        "Type": "530e",
-        "Price": 57000,
-        "Image": "prop-1"
-    },
-    {
-        "Id": 2,
-        "SellRent":2,
-        "Name": "Porsche",
-        "Type": "911",
-        "Price": 120002,
-        "Image": "prop-2"
-    },
-    {
-        "Id": 3,
-        "SellRent":1,
-        "Name": "BMW ",
-        "Type": "M3 Competition",
-        "Price": 12000,
-        "Image": "prop-3"
-    },
-    {
-        "Id": 4,
-        "SellRent":2,
-        "Name": "Porsche",
-        "Type": "718 Spyder",
-        "Price": 90000,
-        "Image": "prop-4"
-    },
-    {
-        "Id": 5,
-        "SellRent":1,
-        "Name": "BMW ",
-        "Type": "M8",
-        "Price": 120000,
-        "Image": "prop-5"
-    },
-    {
-        "Id": 6,
-        "SellRent":1,
-        "Name": "Porsche6",
-        "Type": "Masina",
-        "Price": 120006
-    }
+  {
+      "Id": 1,
+      "SellRent": 1,
+      "Name": "BMW",
+      "Type": "530e",
+      "Price": 57000,
+      "Image": "car-1"
+  },
+  {
+      "Id": 2,
+      "SellRent": 2,
+      "Name": "Porsche",
+      "Type": "911",
+      "Price": 120002,
+      "Image": "car-2"
+  },
+  {
+      "Id": 3,
+      "SellRent": 1,
+      "Name": "BMW",
+      "Type": "M3 Competition",
+      "Price": 12000,
+      "Image": "car-3"
+  },
+  {
+      "Id": 4,
+      "SellRent": 2,
+      "Name": "Porsche",
+      "Type": "718 Spyder",
+      "Price": 90000,
+      "Image": "car-4"
+  },
+  {
+      "Id": 5,
+      "SellRent": 1,
+      "Name": "BMW",
+      "Type": "M8",
+      "Price": 120000,
+      "Image": "car-5"
+  },
+  {
+      "Id": 6,
+      "SellRent": 1,
+      "Name": "Porsche6",
+      "Type": "Masina",
+      "Price": 120006,
+      "Image": "car-6"
+  },
+  {
+      "Id": 7,
+      "SellRent": 1,
+      "Name": "Audi",
+      "Type": "A6 3.0 TFSI",
+      "Price": 45000,
+      "Image": "car-7"
+  },
+  {
+      "Id": 8,
+      "SellRent": 2,
+      "Name": "Mercedes-Benz",
+      "Type": "S580 4MATIC",
+      "Price": 105000,
+      "Image": "car-8"
+  },
+  {
+      "Id": 9,
+      "SellRent": 1,
+      "Name": "Tesla",
+      "Type": "Model S Long Range Plus",
+      "Price": 75000,
+      "Image": "car-9"
+  },
+  {
+      "Id": 10,
+      "SellRent": 2,
+      "Name": "Ford",
+      "Type": "Mustang Shelby GT500",
+      "Price": 85000,
+      "Image": "car-10"
+  },
+  {
+      "Id": 11,
+      "SellRent": 1,
+      "Name": "Chevrolet",
+      "Type": "Corvette Stingray C8",
+      "Price": 90000,
+      "Image": "car-11"
+  },
+  {
+      "Id": 12,
+      "SellRent": 1,
+      "Name": "Lamborghini",
+      "Type": "Huracán Evo RWD",
+      "Price": 200000,
+      "Image": "car-12"
+  },
+  {
+      "Id": 13,
+      "SellRent": 2,
+      "Name": "Jaguar",
+      "Type": "F-Type R-Dynamic",
+      "Price": 65000,
+      "Image": "car-13"
+  },
+  {
+      "Id": 14,
+      "SellRent": 1,
+      "Name": "Ferrari",
+      "Type": "488 GTB",
+      "Price": 275000,
+      "Image": "car-14"
+  },
+  {
+      "Id": 15,
+      "SellRent": 2,
+      "Name": "Maserati",
+      "Type": "GranTurismo Sport",
+      "Price": 70000,
+      "Image": "car-15"
+  },
+  {
+      "Id": 16,
+      "SellRent": 1,
+      "Name": "Aston Martin",
+      "Type": "Vantage V8",
+      "Price": 135000,
+      "Image": "car-16"
+  }
 ]

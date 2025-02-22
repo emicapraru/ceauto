@@ -1,14 +1,99 @@
-<p>
-  property-detail works! Selected property id is {{ propertyId }}
+<div class="row shadow">
+  <div class="col-sm-4 p-0">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img
+          *ngIf="mainPhotoUrl"
+          class="card-img-top"
+          src="{{ mainPhotoUrl }}"
+        />
+        <img
+          *ngIf="!mainPhotoUrl"
+          class="card-img-top"
+          src="assets/images/house_default.png"
+        />
+      </div>
+      <div class="card-body">
+        <h1 class="card-title">{{ cars.name }}</h1>
+        <hr />
+        <div>
+          <strong>Marca: </strong>
+          {{ cars.marca }} Sqft
+        </div>
 
-  <br />
-  <br />
+        <div>
+          <strong>Model: </strong>
+          {{ cars.model }} Sqft
+        </div>
+        <div>
+          <strong>Pret: </strong>
+          {{ cars.pretDeLa }}
+        </div>
+        <!-- <div>
+          <strong>Available for: </strong>
+          <span *ngIf="cars.sellRent == 1">Purchase</span>
+          <span *ngIf="cars.sellRent == 2">Rent</span>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8 p-0">
+    <div class="tab-panel p-3">
+      <tabset class="member-tabset">
+        <tab heading="Detalii suplimentare:">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="heading">
+                <strong>Generatie</strong>
+                <p>{{ cars.generatie }}</p>
+              </div>
 
-  <button (click)="onSelectNext()" class="btn btn-primary">
-    Select Next Page
-  </button>
-  <button href="property-detail/1" class="btn btn-primary">1</button>
-  <button href="property-detail/2" class="btn btn-primary">2</button>
-  <button href="property-detail/3" class="btn btn-primary">3</button>
-  <!-- <button [routerLink]="['/property-detail','4']" class="btn btn-primary">4</button> -->
-</p>
+              <div class="heading">
+                <strong>An</strong>
+                <p>{{ cars.anDeLa }} {{ cars.anPanaLa }}</p>
+              </div>
+
+              <div class="heading">
+                <strong>Combustibil</strong>
+                <p>{{ cars.combustibil }}</p>
+              </div>
+
+              <div class="heading">
+                <strong>Stare Tehnica</strong>
+                <p>{{ cars.stareTehnica }}</p>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="heading">
+                <strong>Descriere</strong>
+                <p>{{ cars.description }}</p>
+              </div>
+            </div>
+          </div>
+        </tab>
+
+        <tab heading="Photos">
+          <div class="gallery">
+            <div class="thumbnails">
+              <img
+                *ngFor="let image of galleryImages; let i = index"
+                [src]="image.small"
+                (click)="selectImage(i)"
+                [class.active]="selectedImageIndex === i"
+                alt="Thumbnail"
+              />
+            </div>
+            <div class="main-image">
+              <img [src]="selectedImage" alt="Selected Image" />
+            </div>
+          </div>
+        </tab>
+        <tab heading="Contact">
+          <h1>Detalii de contact</h1>
+          Acest mesaj poate fi vazut doar ce clientii C&E Auto
+        </tab>
+      </tabset>
+    </div>
+  </div>
+</div>

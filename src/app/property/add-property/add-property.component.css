@@ -1,6 +1,10 @@
 .card-header{
   background: linear-gradient(90deg, #09795d, #09795d);
 }
+.card-container{
+  width: 80%;
+  margin: 0 auto;
+}
 select {
   border-radius: 8px;
   padding: 5px;
@@ -29,12 +33,9 @@ button:hover {
   color: black !important; /* Selected tab will be blue */
 }
 .page-header-bg-image {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 9;
+  height: 80%!important;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -201,4 +202,16 @@ button:hover {
 }
 html {
   scroll-behavior: smooth;
+}
+
+.container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 1200px){
+  .container{
+    max-width: 100%;
+    padding: 0;
+  }
 }
