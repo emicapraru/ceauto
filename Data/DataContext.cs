@@ -15,5 +15,7 @@ namespace WebAPI.Data
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Cars> Cars { get; set; }
+
     }
 }
