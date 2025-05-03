@@ -10,6 +10,7 @@ import { TabsetComponent, TabsModule } from 'ngx-bootstrap/tabs';
 import { NavBarComponent } from '../../nav-bar/nav-bar.component';
 import { DownBarComponent } from '../../down-bar/down-bar.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute } from '@angular/router';
 
 //import emailjs from '@emailjs/browser';
 
@@ -53,7 +54,11 @@ export class AddPropertyComponent implements OnInit {
     alteInformatii: '',
     alteDetalii: '',
   };
-  constructor(private router: Router, private housingService: HousingService) {}
+  constructor(
+    private router: Router,
+    private housingService: HousingService,
+    private route: ActivatedRoute
+  ) {}
   cityList: any[];
 
   ngOnInit() {
@@ -68,7 +73,19 @@ export class AddPropertyComponent implements OnInit {
       this.cityList = data;
     });
   }
-
+  /// this is for navigating from another page to the form cointainer
+  ngAfterViewInit(): void {
+    // Wait for view to initialize then scroll
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment === 'formContainer') {
+        setTimeout(() => {
+          this.formContainer?.nativeElement.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }, 0);
+      }
+    });
+  }
   onBack() {
     this.router.navigate(['/']);
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddPropertyComponent } from '../property/add-property/add-property.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-component',
@@ -7,8 +8,7 @@ import { AddPropertyComponent } from '../property/add-property/add-property.comp
   styleUrls: ['./home-component.component.css'],
 })
 export class HomeComponentComponent implements OnInit {
-  router: any;
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
   scrollIconClicked = false;
@@ -19,5 +19,7 @@ export class HomeComponentComponent implements OnInit {
       this.scrollIconClicked = true;
     }
   }
-  refToContactForm() {}
+  refToContactForm() {
+    this.router.navigate(['/add-property'], { fragment: 'formContainer' });
+  }
 }
