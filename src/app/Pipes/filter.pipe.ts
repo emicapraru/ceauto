@@ -2,41 +2,66 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filter',
+  standalone: true,
 })
 export class FilterPipe implements PipeTransform {
-  transform(value: any[], filterString: string, propName: string): any[] {
-    if (!value || value.length === 0 || !filterString || !propName) {
-      return value;
-    }
-
-    return value.filter(
-      (item) => item[propName] && item[propName].includes(filterString)
-    );
-  }
-
-  filterItems(items: any[], filters: any): any[] {
+  transform(
+    items: any[],
+    {
+      searchValue,
+      propName,
+      filters,
+    }: { searchValue: string; propName: string; filters: any }
+  ): any[] {
     if (!items || items.length === 0) return [];
 
+    const {
+      marca,
+      model,
+      generatie,
+      tipCaroserie,
+      pretDeLa,
+      pretPanaLa,
+      anDeLa,
+      anPanaLa,
+      combustibil,
+      kmDeLa,
+      kmPanaLa,
+      stareTehnica,
+      eligibilFinantare,
+    } = filters;
+
     return items.filter((item) => {
-      return (
-        (!filters.marca || item.marca?.includes(filters.marca)) &&
-        (!filters.model || item.model?.includes(filters.model)) &&
-        (!filters.generatie || item.generatie?.includes(filters.generatie)) &&
-        (!filters.tipCaroserie ||
-          item.tipCaroserie?.includes(filters.tipCaroserie)) &&
-        (!filters.pretDeLa || item.price >= filters.pretDeLa) &&
-        (!filters.pretPanaLa || item.price <= filters.pretPanaLa) &&
-        (!filters.anDeLa || item.year >= filters.anDeLa) &&
-        (!filters.anPanaLa || item.year <= filters.anPanaLa) &&
-        (!filters.combustibil ||
-          item.combustibil?.includes(filters.combustibil)) &&
-        (!filters.kmDeLa || item.km >= filters.kmDeLa) &&
-        (!filters.kmPanaLa || item.km <= filters.kmPanaLa) &&
-        (!filters.stareTehnica ||
-          item.stareTehnica?.includes(filters.stareTehnica)) &&
-        (!filters.eligibilFinantare ||
-          item.eligibilFinantare === filters.eligibilFinantare)
-      );
+      const valueToCheck = item[propName]?.toString().toLowerCase();
+      const matchesSearch =
+        !searchValue || valueToCheck?.includes(searchValue.toLowerCase());
+
+      const matchesAdvanced =
+        (!marca || item.marca?.toLowerCase().includes(marca.toLowerCase())) &&
+        (!model || item.model?.toLowerCase().includes(model.toLowerCase())) &&
+        (!generatie ||
+          item.generatie?.toLowerCase().includes(generatie.toLowerCase())) &&
+        (!tipCaroserie ||
+          item.tipCaroserie
+            ?.toLowerCase()
+            .includes(tipCaroserie.toLowerCase())) &&
+        (!pretDeLa || item.price >= pretDeLa) &&
+        (!pretPanaLa || item.price <= pretPanaLa) &&
+        (!anDeLa || item.year >= anDeLa) &&
+        (!anPanaLa || item.year <= anPanaLa) &&
+        (!combustibil ||
+          item.combustibil
+            ?.toLowerCase()
+            .includes(combustibil.toLowerCase())) &&
+        (!kmDeLa || item.km >= kmDeLa) &&
+        (!kmPanaLa || item.km <= kmPanaLa) &&
+        (!stareTehnica ||
+          item.stareTehnica
+            ?.toLowerCase()
+            .includes(stareTehnica.toLowerCase())) &&
+        (!eligibilFinantare || item.eligibilFinantare === eligibilFinantare);
+
+      return matchesSearch && matchesAdvanced;
     });
   }
 }

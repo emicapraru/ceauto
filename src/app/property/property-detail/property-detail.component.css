@@ -1,14 +1,16 @@
 .card {
   min-height: 300px;
+  max-width: 500px;
 }
 
 .card img {
   padding: 10px;
-  height: 150px;
+  height: 140px;
+  width: 80%; /* Make it responsive */
 }
 
 .card-img-wrapper {
-  height: 150px;
+  height: 50%;
 }
 
 .gallery {
@@ -43,4 +45,36 @@
   width: 500px;
   height: auto;
   border-radius: 5px;
+}
+
+
+/* Ensure the container also has padding */
+.container {
+  padding: 50px; /* Adds spacing around content */
+  max-width: 1200px; /* Prevents content from stretching too wide */
+  margin: auto; /* Centers the content */
+}
+
+.card-body strong {
+  font-size: 18px; /* Make labels bigger */
+  font-weight: bold;
+  color: #333;
+}
+
+.card-body div {
+  font-size: 16px; /* Increase size of text */
+  font-weight: 500;
+}
+/* Make Generație text bigger */
+.heading strong {
+  font-size: 18px; /* Match Marca and Pret */
+  font-weight: bold;
+  color: #333;
+  display: block; /* Ensures proper spacing */
+  margin-bottom: 15px; /* Moves labels down */
+}
+
+.heading p {
+  font-size: 16px; /* Increase text size */
+  font-weight: 500;
 }

@@ -10,6 +10,8 @@ body {
   border-radius: 8px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 /* Labels */
@@ -107,15 +109,40 @@ input[type="checkbox"] {
     flex: 1 1 100%;
   }
 }
+
 .cars{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; /* Ensures even distribution */
   gap: 15px; /* Space between items */
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .col-sm-4 {
-  flex: 1 1 calc(33.33% - 15px); /* 3 items per row by default */
-  max-width: calc(33.33% - 15px);
+  flex: 1 1 calc(25% - 15px); /* 4 items per row */
+  max-width: calc(25% - 15px);
+}
+
+/* Ensure responsive behavior */
+@media (max-width: 992px) {
+  .col-sm-4 {
+    flex: 1 1 calc(33.33% - 15px); /* 3 items per row on medium screens */
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .col-sm-4 {
+    flex: 1 1 calc(50% - 15px); /* 2 items per row on small screens */
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 576px) {
+  .col-sm-4 {
+    flex: 1 1 100%; /* 1 item per row on extra small screens */
+    max-width: 100%;
+  }
 }
 .button{
   background: linear-gradient(90deg, #09795d, #09795d);
@@ -124,24 +151,27 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: flex-end; /* Pushes content to the right */
-  gap: 10px;
   margin-bottom: 10px;
+  gap:2px;
 }
-
+.sort-controls .col-auto:last-child {
+  margin-left: 125px; /* Moves only the button 50px left */
+}
 .sort-label {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: #333;
+  margin-right: 5px;
 }
 
 .sort-controls select {
   width: auto;
-  padding: 8px;
 }
 
 .sort-controls button {
   background: #09795d;
   padding: 8px 12px;
+  margin-left: -140px;
 }
 .custom-dropdown {
   position: relative;

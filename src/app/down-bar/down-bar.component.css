@@ -2,7 +2,7 @@
 .down-bar-container {
   position: fixed;
   bottom: 3%;
-  right: 3%; /* Position the button on the right side */
+  right: 1.5%; /* Position the button on the right side */
   text-align: center;
 }
 

@@ -11,6 +11,8 @@ import { NavBarComponent } from '../../nav-bar/nav-bar.component';
 import { DownBarComponent } from '../../down-bar/down-bar.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
+//import emailjs from '@emailjs/browser';
+
 @Component({
   selector: 'app-add-property',
   templateUrl: './add-property.component.html',
@@ -74,6 +76,9 @@ export class AddPropertyComponent implements OnInit {
   onSubmit(Form: NgForm) {
     console.log('Congrats');
     console.log(this.addPropertyForm);
+    if (this.addPropertyForm.valid) {
+      //this.sendEmail();
+    }
   }
 
   selectTab(tabId: number) {
@@ -85,4 +90,31 @@ export class AddPropertyComponent implements OnInit {
   toggleSteps() {
     this.stepsVisible = !this.stepsVisible;
   }
+  scrollIconClicked = false;
+  scrollToSteps() {
+    const stepsSection = document.querySelector('.steps-container');
+    if (stepsSection) {
+      stepsSection.scrollIntoView({ behavior: 'smooth' });
+      this.scrollIconClicked = true;
+    }
+  }
+  // sendEmail() {
+  //   emailjs
+  //     .send(
+  //       'your_service_id',
+  //       'your_template_id',
+  //       this.propertyView,
+  //       'your_user_id'
+  //     )
+  //     .then(
+  //       (response) => {
+  //         console.log('Email sent successfully!', response);
+  //         alert('Your email has been sent!');
+  //       },
+  //       (error) => {
+  //         console.error('Error sending email', error);
+  //         alert('Failed to send email.');
+  //       }
+  //     );
+  // }
 }

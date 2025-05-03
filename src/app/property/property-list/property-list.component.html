@@ -137,7 +137,8 @@
   <div
     *ngFor="
       let property of properties
-        | filter : SearchCar : 'car'
+        | filter
+          : { searchValue: filter.marca, propName: 'marca', filters: filter }
         | sort : [SortbyParam, SortDirection]
     "
     class="col-sm-4"

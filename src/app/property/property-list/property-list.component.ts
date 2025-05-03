@@ -27,7 +27,7 @@ export class PropertyListComponent implements OnInit {
   SellRent = 1;
   properties: Array<IProperty>;
   Car: string = '';
-  SearchCar: any;
+  SearchCar: string = '';
   SortbyParam = '';
   SortDirection: string = 'asc';
   filter = {
@@ -46,8 +46,37 @@ export class PropertyListComponent implements OnInit {
     searchTerm: '',
     eligibilFinantare: false,
   };
-  marcas = ['BMW', 'Audi', 'Mercedes', 'Toyota'];
-  models = ['X5', 'A4', 'C-Class', 'Corolla'];
+  marcas = [
+    'BMW',
+    'Audi',
+    'Mercedes',
+    'Porsche',
+    'Aston Martin',
+    'Ford',
+    'Tesla',
+    'Lamborghini',
+    'Chevrolet',
+    'Ferrari',
+    'Maserati',
+    'Jaguar',
+  ];
+  models = [
+    '911',
+    'A6',
+    'G-Class',
+    'Corolla',
+    'Mustang',
+    'Taycan',
+    'GranTurismo',
+    'F-Type',
+    'S580',
+    'M3',
+    'M8',
+    'Model S',
+    'DBX',
+    '330E',
+    '488',
+  ];
   tipuriCaroserie = ['Sedan', 'SUV', 'Hatchback'];
   combustibili = ['Benzină', 'Motorină', 'Hibrid', 'Electric'];
   stariTehnice = ['Nou', 'Rulat', 'Avariat'];
@@ -76,10 +105,25 @@ export class PropertyListComponent implements OnInit {
     });
   }
   onCarFiler() {
-    this.SearchCar = this.SearchCar;
     console.log('Filters Applied:', this.filter);
   }
   onCityFilterClear() {
+    this.filter = {
+      marca: '',
+      model: '',
+      generatie: '',
+      tipCaroserie: '',
+      pretDeLa: null,
+      pretPanaLa: null,
+      anDeLa: null,
+      anPanaLa: null,
+      combustibil: '',
+      kmDeLa: null,
+      kmPanaLa: null,
+      stareTehnica: '',
+      searchTerm: '',
+      eligibilFinantare: false,
+    };
     this.SearchCar = '';
     this.Car = '';
   }

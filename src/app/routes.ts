@@ -6,11 +6,16 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 import { RouterModule } from '@angular/router';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
 
 const routeConfig: Routes = [
   {
     path: '',
     component: PropertyListComponent,
+  },
+  {
+    path: 'home-component',
+    component: HomeComponentComponent,
   },
   {
     path: 'property-detail/:id',

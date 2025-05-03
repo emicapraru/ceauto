@@ -1,6 +1,19 @@
 <div class="container">
-  <img class="page-header-bg-image" src="assets/images/background.png" />
-
+  <div class="photo-container">
+    <div class="scroll-icon" (click)="scrollToSteps()">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+    <img class="page-header-bg-image" src="assets/images/background.png" />
+    <div class="title">
+      <h1>C&E Auto</h1>
+    </div>
+    <div class="header-text">
+      <h1>Alege maşina perfectă pentru tine.</h1>
+      <span>Noi te ajutăm să o găsești!</span>
+    </div>
+  </div>
   <div class="steps-container">
     <h2>Iată cum arată colaborarea cu noi!</h2>
     <p>
@@ -122,19 +135,19 @@
                     <span *ngIf="propName.errors?.['required']">
                       Please provide name!</span
                     >
-                    <span *ngIf="propName.errors?.['required']"
+                    <span *ngIf="propName.errors?.['minlength']"
                       >Name must be at least 5 length caracters</span
                     >
                   </span>
                 </div>
                 <div class="form-group col-12">
-                  <label for="name">Prenume:</label>
+                  <label for="prename">Prenume:</label>
                   <input
                     type="text"
                     class="form-control"
                     #propName="ngModel"
                     ngModel
-                    name="Name"
+                    name="prename"
                     required
                     minlength="5"
                   />
@@ -145,7 +158,7 @@
                     <span *ngIf="propName.errors?.['required']">
                       Please provide name!</span
                     >
-                    <span *ngIf="propName.errors?.['required']"
+                    <span *ngIf="propName.errors?.['minlength']"
                       >Name must be at least 5 length caracters</span
                     >
                   </span>
@@ -157,7 +170,7 @@
                     class="form-control"
                     #propName="ngModel"
                     ngModel
-                    name="Name"
+                    name="email"
                     required
                     minlength="5"
                   />
@@ -168,7 +181,7 @@
                     <span *ngIf="propName.errors?.['required']">
                       Please provide email!</span
                     >
-                    <span *ngIf="propName.errors?.['required']"
+                    <span *ngIf="propName.errors?.['minlength']"
                       >Email must be at least 5 length caracters</span
                     >
                   </span>
@@ -346,7 +359,11 @@
                 >
                   Back
                 </button>
-                <button type="button" class="btn btn-primary btn-block button">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block button"
+                  (click)="onSubmit(Form)"
+                >
                   Trimite
                 </button>
               </tab>
