@@ -121,8 +121,12 @@
     <label class="sort-label">Sort by:</label>
   </div>
   <div class="col-auto custom-dropdown">
-    <select [(ngModel)]="SortbyParam" class="form-control">
-      <option value="Name">Name</option>
+    <select
+      [(ngModel)]="SortbyParam"
+      class="form-control"
+      (change)="onSortByChange()"
+    >
+      <option value="marca">Marca</option>
       <option value="Price">Price</option>
     </select>
   </div>

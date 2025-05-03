@@ -2,6 +2,7 @@
   {
       "Id": 1,
       "SellRent": 1,
+      "Name":"BMW",
       "marca": "BMW",
       "Type": "530e",
       "Price": 57000,
@@ -10,6 +11,7 @@
   {
       "Id": 2,
       "SellRent": 2,
+      "Name": "Porsche",
       "marca": "Porsche",
       "Type": "911",
       "Price": 120002,
@@ -18,6 +20,7 @@
   {
       "Id": 3,
       "SellRent": 1,
+      "Name": "BMW",
       "marca": "BMW",
       "Type": "M3 Competition",
       "Price": 12000,
@@ -26,6 +29,7 @@
   {
       "Id": 4,
       "SellRent": 2,
+      "Name": "Porsche",
       "marca": "Porsche",
       "Type": "718 Spyder",
       "Price": 90000,
@@ -34,6 +38,7 @@
   {
       "Id": 5,
       "SellRent": 1,
+      "Name": "BMW",
       "marca": "BMW",
       "Type": "M8",
       "Price": 120000,
@@ -42,14 +47,16 @@
   {
       "Id": 6,
       "SellRent": 1,
-      "marca": "Porsche 911 Cabriolet",
-      "Type": "Masina",
+      "Name": "Porsche",
+      "marca": "Porsche",
+      "Type": "911 Cabriolet",
       "Price": 120006,
       "Image": "porsche6"
   },
   {
       "Id": 7,
       "SellRent": 1,
+      "Name": "Audi",
       "marca": "Audi",
       "Type": "A6 3.0 TFSI",
       "Price": 45000,
@@ -58,6 +65,7 @@
   {
       "Id": 8,
       "SellRent": 2,
+      "Name": "Mercedes-Benz",
       "marca": "Mercedes-Benz",
       "Type": "S580 4MATIC",
       "Price": 105000,
@@ -66,6 +74,7 @@
   {
       "Id": 9,
       "SellRent": 1,
+      "Name": "Tesla",
       "marca": "Tesla",
       "Type": "Model S Long Range ",
       "Price": 75000,
@@ -74,6 +83,7 @@
   {
       "Id": 10,
       "SellRent": 2,
+      "Name": "Ford",
       "marca": "Ford",
       "Type": "Mustang Shelby GT500",
       "Price": 85000,
@@ -82,6 +92,7 @@
   {
       "Id": 11,
       "SellRent": 1,
+      "Name": "Chevrolet",
       "marca": "Chevrolet",
       "Type": "Corvette Stingray C8",
       "Price": 90000,
@@ -90,6 +101,7 @@
   {
       "Id": 12,
       "SellRent": 1,
+      "Name": "Lamborghini",
       "marca": "Lamborghini",
       "Type": "Huracán Evo RWD",
       "Price": 200000,
@@ -98,6 +110,7 @@
   {
       "Id": 13,
       "SellRent": 2,
+      "Name": "Jaguar",
       "marca": "Jaguar",
       "Type": "F-Type R-Dynamic",
       "Price": 65000,
@@ -106,6 +119,7 @@
   {
       "Id": 14,
       "SellRent": 1,
+      "Name": "Ferrari",
       "marca": "Ferrari",
       "Type": "488 GTB",
       "Price": 275000,
@@ -114,6 +128,7 @@
   {
       "Id": 15,
       "SellRent": 2,
+      "Name": "Maserati",
       "marca": "Maserati",
       "Type": "GranTurismo Sport",
       "Price": 70000,
@@ -122,6 +137,7 @@
   {
       "Id": 16,
       "SellRent": 1,
+      "Name": "Aston Martin",
       "marca": "Aston Martin",
       "Type": "Vantage V8",
       "Price": 135000,
@@ -130,6 +146,7 @@
   {
     "Id": 17,
     "SellRent": 1,
+    "Name": "Aston Martin",
     "marca": "Aston Martin",
     "Type": "DBX V8",
     "Price": 135000,
@@ -138,6 +155,7 @@
 {
   "Id": 18,
   "SellRent": 1,
+  "Name": "BMW",
   "marca": "BMW",
   "Type": "330E",
   "Price": 35000,
@@ -146,6 +164,7 @@
 {
   "Id": 19,
   "SellRent": 2,
+  "Name": "Porsche",
   "marca": "Porsche",
   "Type": "Taycan S",
   "Price": 105000,
@@ -153,6 +172,7 @@
 },{
   "Id": 20,
   "SellRent": 2,
+  "Name": "Mercedes-Benz",
   "marca": "Mercedes-Benz",
   "Type": " G 450",
   "Price": 135000,

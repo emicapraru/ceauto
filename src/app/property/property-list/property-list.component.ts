@@ -28,7 +28,7 @@ export class PropertyListComponent implements OnInit {
   properties: Array<IProperty>;
   Car: string = '';
   SearchCar: string = '';
-  SortbyParam = '';
+  SortbyParam = 'marcas';
   SortDirection: string = 'asc';
   filter = {
     marca: '',
@@ -127,11 +127,23 @@ export class PropertyListComponent implements OnInit {
     this.SearchCar = '';
     this.Car = '';
   }
-  onSortDirection() {
-    if (this.SortDirection === 'desc') {
-      this.SortDirection = 'asc';
-    } else {
-      this.SortDirection = 'desc';
+  // Apply sorting based on selected parameter
+  sortProperties() {
+    if (this.SortbyParam === 'marca') {
+      this.properties.sort((a, b) => {
+        const marcaA = a.marca.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+        const marcaB = b.marca.toLowerCase();
+        if (marcaA < marcaB) return this.SortDirection === 'asc' ? -1 : 1;
+        if (marcaA > marcaB) return this.SortDirection === 'asc' ? 1 : -1;
+        return 0;
+      });
     }
+  }
+  onSortByChange() {
+    this.sortProperties(); // Reapply sorting whenever the sorting parameter changes
+  }
+  onSortDirection() {
+    this.SortDirection = this.SortDirection === 'asc' ? 'desc' : 'asc';
+    this.sortProperties(); // reapply sorting after direction change
   }
 }
