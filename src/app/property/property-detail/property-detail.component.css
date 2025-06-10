@@ -5,8 +5,8 @@
 
 .card img {
   padding: 10px;
-  height: 140px;
-  width: 80%; /* Make it responsive */
+  height: 210px;
+  width: 100%; /* Make it responsive */
 }
 
 .card-img-wrapper {

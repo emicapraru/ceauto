@@ -10,23 +10,23 @@
         <img
           *ngIf="!mainPhotoUrl"
           class="card-img-top"
-          src="assets/images/house_default.png"
+          src="assets/images/car-4.png"
         />
       </div>
       <div class="card-body">
         <h1 class="card-title">{{ cars.name }}</h1>
         <hr />
         <div>
-          <strong>Marca: </strong>
+          <strong>Marca: Porsche </strong>
           {{ cars.marca }}
         </div>
 
         <div>
-          <strong>Model: </strong>
+          <strong>Model: 718 Spyder </strong>
           {{ cars.model }}
         </div>
         <div>
-          <strong>Pret: </strong>
+          <strong>Pret: 98000 Euro </strong>
           {{ cars.pretDeLa }}
         </div>
         <!-- <div>
@@ -44,29 +44,43 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="heading">
-                <strong>Generatie:</strong>
+                <strong>Generatie: IV</strong>
                 <p>{{ cars.generatie }}</p>
               </div>
 
               <div class="heading">
-                <strong>An:</strong>
+                <strong>An: 2020</strong>
                 <p>{{ cars.anDeLa }} {{ cars.anPanaLa }}</p>
               </div>
 
               <div class="heading">
-                <strong>Combustibil:</strong>
+                <strong>Combustibil: Benzina</strong>
                 <p>{{ cars.combustibil }}</p>
               </div>
 
               <div class="heading">
-                <strong>Stare Tehnica:</strong>
+                <strong>Stare Tehnica: Ca Nou</strong>
                 <p>{{ cars.stareTehnica }}</p>
               </div>
             </div>
 
             <div class="col-sm-12">
               <div class="heading">
-                <strong>Descriere:</strong>
+                <strong
+                  >Descriere: Porsche 718 Spyder 2020 - 6.800km - AUTOMAT PDK
+                  Tva inclus 98.000€ / TVA Deductibil Dacă ești interesat
+                  lasa-mi un mesaj pe whatsapp și te voi suna cand sunt
+                  disponibil. Adus din germania. (unfallfrei - Fara accidente)
+                  Inclus Porsche Approved WARRANTY valabila pana pe 16/05/2025
+                  Culoare: Galben Bumble Bee PPF: Folie Protectie XPEL Nici o
+                  data in circuite sau schimbate tobele "Modificari tunning"
+                  etc... Unica modificare care o are este CarGraphic Valve
+                  Control Unit Valvele Originale pot fi deschise permanent sau
+                  inchise cu telecomanda. Original se deschid 100% numa cand
+                  treci de 4000 turatii. "CARGRAPHIC OEM Valve Control Unit
+                  3-mode = 470€" Motor 6 cilindri, aspirat natural, 4.0 litri -
+                  420 cai putere Audio BOSE® Surround Sound System</strong
+                >
                 <p>{{ cars.description }}</p>
               </div>
             </div>
@@ -85,7 +99,7 @@
               />
             </div>
             <div class="main-image">
-              <img [src]="selectedImage" alt="Selected Image" />
+              <img src="assets/images/porsche.png" />
             </div>
           </div>
         </tab>

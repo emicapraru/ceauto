@@ -21,9 +21,9 @@ export class PropertyDetailComponent implements OnInit {
   selectedImage: string;
   selectedImageIndex: number = 0;
   galleryImages = [
-    { small: 'assets/img1-small.jpg', big: 'assets/img1-big.jpg' },
-    { small: 'assets/img2-small.jpg', big: 'assets/img2-big.jpg' },
-    { small: 'assets/img3-small.jpg', big: 'assets/img3-big.jpg' },
+    { small: 'assets/porsche.png', big: 'assets/porsche.png' },
+    { small: 'assets/porsche.png', big: 'assets/porsche.png' },
+    { small: 'aassets/porsche.png', big: 'assets/porsche.png' },
   ];
   constructor(
     private route: ActivatedRoute,
@@ -39,6 +39,9 @@ export class PropertyDetailComponent implements OnInit {
     this.housingService.getAllCarsDetails(this.Marca).subscribe({
       next: (data) => {
         this.carsproperties = data;
+        this.cars = this.carsproperties.find(
+          (car) => car.id === this.propertyId.toString()
+        )!;
         console.log('Data fetched successfully:', data);
         //console.log(this.route.snapshot.url.toString());
       },

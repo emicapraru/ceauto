@@ -2,136 +2,147 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
-<div class="container">
-  <div class="screen">
-    <div class="screen_content">
-      <form
-        class="register"
-        [formGroup]="registerationForm"
-        (ngSubmit)="onSubmit()"
-      >
-        <div class="register_field">
-          <i class="register__icon fas fa-user"></i>
-          <label for="name" class="form-label">Name</label>
-          <input
-            class="register_input"
-            type="text"
-            formControlName="userName"
-            placeholder="User name"
-          />
-          <span
-            *ngIf="!userName.valid && (userName.touched || userSubmitted)"
-            class="error-block"
-          >
-            Please provide name
-          </span>
-        </div>
+<div class="body">
+  <div class="container">
+    <div class="screen">
+      <div class="screen_content">
+        <form
+          class="register"
+          [formGroup]="registerationForm"
+          (ngSubmit)="onSubmit()"
+        >
+          <div class="register_field">
+            <i class="register__icon fas fa-user"></i>
+            <label for="name" class="form-label">Name</label>
+            <input
+              class="register_input"
+              type="text"
+              formControlName="userName"
+              placeholder="User name"
+            />
+            <span
+              *ngIf="!userName.valid && (userName.touched || userSubmitted)"
+              class="error-block"
+            >
+              Please provide name
+            </span>
+          </div>
 
-        <div class="register_field">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="text"
-            class="register_input"
-            formControlName="email"
-            placeholder="Email"
-          />
-          <span
-            *ngIf="!email.valid && (email.touched || userSubmitted)"
-            class="error-block"
-          >
-            <span *ngIf="email.hasError('required')">
-              Please provide email id
+          <div class="register_field">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="text"
+              class="register_input"
+              formControlName="email"
+              placeholder="Email"
+            />
+            <span
+              *ngIf="!email.valid && (email.touched || userSubmitted)"
+              class="error-block"
+            >
+              <span *ngIf="email.hasError('required')">
+                Please provide email id
+              </span>
+              <span *ngIf="email.hasError('email')">
+                Please provide valid email id
+              </span>
             </span>
-            <span *ngIf="email.hasError('email')">
-              Please provide valid email id
-            </span>
-          </span>
-        </div>
+          </div>
 
-        <div class="register_field">
-          <label for="password" class="form-label">Password</label>
-          <input
-            type="password"
-            class="register_input"
-            formControlName="password"
-            placeholder="Password"
-          />
-          <span
-            *ngIf="!password.valid && (password.touched || userSubmitted)"
-            class="error-block"
-          >
-            <span *ngIf="password?.errors?.['required']">
-              Please provide password
+          <div class="register_field">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="register_input"
+              formControlName="password"
+              placeholder="Password"
+            />
+            <span
+              *ngIf="!password.valid && (password.touched || userSubmitted)"
+              class="error-block"
+            >
+              <span *ngIf="password?.errors?.['required']">
+                Please provide password
+              </span>
+              <span *ngIf="password?.errors?.['minlength']">
+                Password should not be shorter than 8 characters
+              </span>
             </span>
-            <span *ngIf="password?.errors?.['minlength']">
-              Password should not be shorter than 8 characters
-            </span>
-          </span>
-        </div>
+          </div>
 
-        <div class="register_field">
-          <label for="confirmPassword" class="form-label"
-            >Confirm Password</label
-          >
-          <input
-            class="register_input"
-            type="password"
-            formControlName="confirmPassword"
-            placeholder="Confirm Password"
-          />
-          <span
-            *ngIf="
-              !confirmPassword.valid &&
-              (confirmPassword.touched || userSubmitted)
-            "
-            class="error-block"
-          >
-            <span *ngIf="confirmPassword.hasError('required')">
-              Please confirm password
+          <div class="register_field">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              class="register_input"
+              type="password"
+              formControlName="confirmPassword"
+              placeholder="Confirm Password"
+            />
+            <span
+              *ngIf="
+                !confirmPassword.valid &&
+                (confirmPassword.touched || userSubmitted)
+              "
+              class="error-block"
+            >
+              <span *ngIf="confirmPassword.hasError('required')">
+                Please confirm password
+              </span>
             </span>
-          </span>
-          <span
-            *ngIf="
-              registerationForm.hasError('notmatched') && confirmPassword.valid
-            "
-          >
-            Passwords do not match
-          </span>
-        </div>
+            <span
+              *ngIf="
+                registerationForm.hasError('notmatched') &&
+                confirmPassword.valid
+              "
+            >
+              Passwords do not match
+            </span>
+          </div>
 
-        <div class="register_field">
-          <label for="mobile" class="form-label">Mobile</label>
-          <input
-            type="text"
-            class="register_input"
-            formControlName="mobile"
-            placeholder="Mobile"
-          />
-          <span
-            *ngIf="!mobile.valid && (mobile.touched || userSubmitted)"
-            class="error-block"
-          >
-            <span *ngIf="mobile.hasError('required')">
-              Please provide mobile
+          <div class="register_field">
+            <label for="mobile" class="form-label">Mobile</label>
+            <input
+              type="text"
+              class="register_input"
+              formControlName="mobile"
+              placeholder="Mobile"
+            />
+            <span
+              *ngIf="!mobile.valid && (mobile.touched || userSubmitted)"
+              class="error-block"
+            >
+              <span *ngIf="mobile.hasError('required')">
+                Please provide mobile
+              </span>
+              <span *ngIf="mobile.hasError('maxlength')" class="error-block">
+                Invalid mobile number
+              </span>
             </span>
-            <span *ngIf="mobile.hasError('maxlength')" class="error-block">
-              Invalid mobile number
-            </span>
-          </span>
-        </div>
+          </div>
 
-        <!-- Buttons inside the form -->
-        <div class="register_field buttons">
-          <button type="submit" class="register__submit">Save</button>
-          <button type="button" class="register__cancel">Cancel</button>
-        </div>
-      </form>
-    </div>
-    <div class="screen__background">
-      <span class="screen__background__shape screen__background__shape4"></span>
-      <span class="screen__background__shape screen__background__shape3"></span>
-      <span class="screen__background__shape screen__background__shape2"></span>
-      <span class="screen__background__shape screen__background__shape1"></span>
+          <!-- Buttons inside the form -->
+          <div class="register_field buttons">
+            <button type="submit" class="register__submit">Save</button>
+            <button type="button" class="register__cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+      <div class="screen__background">
+        <span
+          class="screen__background__shape screen__background__shape4"
+        ></span>
+        <span
+          class="screen__background__shape screen__background__shape3"
+        ></span>
+        <span
+          class="screen__background__shape screen__background__shape2"
+        ></span>
+        <span
+          class="screen__background__shape screen__background__shape1"
+        ></span>
+      </div>
     </div>
   </div>
 </div>

@@ -6,15 +6,6 @@
   font-family: Raleway, sans-serif;
 }
 
-body {
-  background-color: #09795d; /* Solid color background */
-  color: #fff; /* Text color for contrast against the background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 /* Container for centering the form */
 .container {
   min-height: 68px;
@@ -140,4 +131,3 @@ input:focus {
 	box-shadow: 0px 0px 24px #09795d;
   border-radius: 12px;
   }
-
