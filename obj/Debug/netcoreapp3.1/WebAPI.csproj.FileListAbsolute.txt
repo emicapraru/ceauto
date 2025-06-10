@@ -68,10 +68,6 @@ D:\Dizertatie\App\HSPA\Webapi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Crypt
 D:\Dizertatie\App\HSPA\Webapi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Dizertatie\App\HSPA\Webapi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 D:\Dizertatie\App\HSPA\Webapi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
-D:\Dizertatie\App\HSPA\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.sourcelink.json
-D:\Dizertatie\App\HSPA\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWebAssets.Pack.cache
-D:\Dizertatie\App\HSPA\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Dizertatie\App\HSPA\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.WebAPI.props
-D:\Dizertatie\App\HSPA\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.WebAPI.props
-D:\Dizertatie\App\HSPA\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.WebAPI.props
-D:\Dizertatie\App\HSPA\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.Up2Date
+D:\Dizertatie\App\HSPA\Webapi\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWebAssets.xml
+D:\Dizertatie\App\HSPA\Webapi\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebAPI.styles.css
+D:\Dizertatie\App\HSPA\Webapi\obj\Debug\netcoreapp3.1\WebAPI.csproj.CopyComplete
