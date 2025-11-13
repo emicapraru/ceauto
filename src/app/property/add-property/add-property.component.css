@@ -272,10 +272,14 @@ html {
   height: 50px;
   border: 2px solid #409b84;
   border-radius: 15px;
-  position: relative;
+  position: fixed;
+  bottom: 30px;           /* <-- Add this */
+  left: 50%;              /* <-- Center horizontally */
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;          /* <-- Make sure it's on top */
 }
 
 .wheel {

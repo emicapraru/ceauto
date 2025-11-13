@@ -75,7 +75,7 @@ export class AddPropertyComponent implements OnInit {
   }
   /// this is for navigating from another page to the form cointainer
   ngAfterViewInit(): void {
-    // Wait for view to initialize then scroll
+    // Smooth scroll to the form if route fragment matches
     this.route.fragment.subscribe((fragment) => {
       if (fragment === 'formContainer') {
         setTimeout(() => {
@@ -83,6 +83,20 @@ export class AddPropertyComponent implements OnInit {
             behavior: 'smooth',
           });
         }, 0);
+      }
+    });
+
+    // Hide the scroll icon after scrolling down a bit
+    window.addEventListener('scroll', () => {
+      const mouse = document.querySelector('.mouse') as HTMLElement;
+      if (mouse) {
+        if (window.scrollY > 100) {
+          mouse.style.opacity = '0';
+          mouse.style.pointerEvents = 'none';
+        } else {
+          mouse.style.opacity = '1';
+          mouse.style.pointerEvents = 'auto';
+        }
       }
     });
   }

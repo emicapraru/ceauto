@@ -127,10 +127,14 @@ html {
   height: 50px;
   border: 2px solid #409b84;
   border-radius: 15px;
-  position: relative;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .wheel {
@@ -257,4 +261,12 @@ html {
   width: 40%; /* Adjust the width to make the image smaller */
   height: auto; /* Keeps the aspect ratio of the image */
   border-radius: 50%; /* Makes the image round */
+}
+
+.consultant-name {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
 }
